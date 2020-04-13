@@ -3,6 +3,7 @@ package com.example.android.miwok;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,8 +42,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
         miwokTextView.setText(currentWord.getMiwokTranslation());
 
         LinearLayout textLayout = (LinearLayout) listItemView.findViewById(R.id.textLayout);
+        ConstraintLayout playButton = (ConstraintLayout) listItemView.findViewById(R.id.playLayout);
         int color = ContextCompat.getColor(getContext(),this.backColor);
         textLayout.setBackgroundColor(color);
+        playButton.setBackgroundColor(color);
+
+
 
         ImageView image = (ImageView) listItemView.findViewById(R.id.imageView);
         if (currentWord.getImageResource() != 0) {
