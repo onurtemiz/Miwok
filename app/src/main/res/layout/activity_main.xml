@@ -39,6 +39,7 @@
         android:id="@+id/colors"
         style="@style/CategoryStyle"
         android:background="@color/category_colors"
+        android:padding="16dp"
         android:text="@string/category_colors" />
 
     <TextView
